@@ -1,14 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Hungrybunny</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+<html lang='en-US'>
+  <head>
+    <title>The Hungry Bunny - Supper Club</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header>
+      <%= render 'refills/centered_navigation' %>
+    </header>
+    <section>
+      <%= yield %>
+    </section>
+    <footer>
+      &copy 2015 The Hungry Bunny Supper Club
+    </footer>
+  </body>
 </html>
