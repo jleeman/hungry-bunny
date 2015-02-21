@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get 'event', to: 'events#show'
 
   resources :events, only: [:index, :show]
+  resources :users
 end
