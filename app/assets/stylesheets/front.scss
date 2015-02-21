@@ -1,0 +1,7 @@
+section.front-container {
+  @include outer-container;
+}
+
+div.front-card {
+  @include span-columns(4);
+}
