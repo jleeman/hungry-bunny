@@ -1,4 +1,4 @@
-class Admin::VideosController < ApplicationController
+class Admin::EventsController < ApplicationController
   before_filter :require_user
   before_filter :require_admin
 
@@ -9,10 +9,10 @@ class Admin::VideosController < ApplicationController
   def create
     @event = Event.new(event_params)
     if @event.save
-      flash[:success] = "You have successfully added #{@event.title}."
-      redirect_to new_admin_video_path
+      flash[:success] = "You have successfully created an event!"
+      redirect_to root_path
     else
-      flash[:danger] = "Please review required fields."
+      flash[:error] = "Please review required fields."
       render :new
     end
   end
@@ -21,12 +21,12 @@ class Admin::VideosController < ApplicationController
 
   def require_admin
     if !current_user.admin?
-      flash[:danger] = "You do not have access."
-      redirect_to home_path
+      flash[:error] = "You do not have access."
+      redirect_to root_path
     end
   end
 
   def event_params
-    params.require(:event).permit(:cocktail, :description, :photo, :date, :time, :address, :dessert, :course_1, :course_2, :course_3, :title, :type)
+    params.require(:event).permit(:cocktail, :description, :photo, :event_date, :event_time, :address, :dessert, :course_1, :course_2, :course_3, :title, :event_type)
   end
 end

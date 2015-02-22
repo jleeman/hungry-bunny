@@ -1,0 +1,13 @@
+<% flash.each do |key, value| %>
+  <div class="alert flash-<%= key %>"><%= value %></div>
+<% end %>
+<article class="type-system-traditional">
+  <%= form_tag({controller: "sessions", action: "create"}, method: "post", class: "centered") do %>
+    <h1>Login</h1>
+    <%= label_tag(:email, "Email:") %>
+    <%= text_field_tag(:email) %>
+    <%= label_tag(:password, "Password:") %>
+    <%= password_field_tag(:password) %>
+    <%= submit_tag "Login" %>
+  <% end %>
+</article>

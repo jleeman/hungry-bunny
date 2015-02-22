@@ -6,15 +6,28 @@
     <div class="side-image">
     <div class="images-wrapper"></div>
       <div class="side-image-content">
-        <h4>BRUNCH</h4>
-        <h1>Saturday, September 28</h1>
-        <h3>123 First Avenue, New York, NY</h3>
-        <p class="date">11 AM</p>
-        <p><span>Brunch is a little lazier</span>, a little slower, a little ho-hummier meal... but no less delicious.</p>
-        <p>So we decided to approach it a little less formally-- not in course-by-course action, but with a few things served together so you can take your time and enjoy your company.</p>
-        <p>Come by to sop up the night's excess alcohol with <strong>eggs</strong>, <strong>pork</strong>, assorted <strong>biscuits</strong> and <strong>breads</strong>, <strong>leeks</strong> (who doesn't want <strong>leeks</strong>?) with a surprise or two. And because it was such a hit, we're doing a cocktail: an <strong>orange-y Creole coffee punch</strong>! Be there or be square... or asleep [snooze].</p>
+        <h4><%= @event.event_type %></h4>
+        <h1><%= @event.title %></h1>
+        <h3><%= @event.address %></h3>
+        <p class="date">
+          <%= @event.event_date.strftime("%B %d, %Y") %>, <%= @event.event_time.strftime("%I %p") %>
+        </p>
+        <p><%= @event.description %></p>
+        <p class="date">Cocktail</p>
+        <p><%= @event.cocktail %></p>
+        <p class="date">Course 1</p>
+        <p><%= @event.course_1 %></p>
+        <p class="date">Course 2</p>
+        <p><%= @event.course_2 %></p>
+        <p class="date">Couse 3</p>
+        <p><%= @event.course_3 %></p>
+        <p class="date">Course 4</p>
+        <p><%= @event.course_4 %></p>
+        <p class="date">Dessert</p>
+        <p><%= @event.dessert %></p>
         <button>Reserve Today!</button>
       </div>
     </div>
   </article>
 </section>
+
