@@ -5,7 +5,13 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.save
+    if @user.save
+      flash[:success] = "You have successfully registered, #{@user.email}."
+      redirect_to root_path
+    else
+      flash[:error] = "Please review required fields."
+      render :new
+    end
   end
 
   def show

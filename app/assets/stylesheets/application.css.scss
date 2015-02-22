@@ -5,17 +5,19 @@
 @import "refills/centered-navigation";
 @import "refills/flashes";
 @import "refills/hero";
-@import "refills/type-system-slab";
+@import "refills/type-system-traditional";
 @import "refills/side-image";
 @import "refills/cards";
+@import "refills/flashes";
 
 // Custom Site styles
 
 @import "front";
+@import "forms";
 
 // Google Fonts
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300);
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700);
+@import url(http://fonts.googleapis.com/css?family=Radley:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic);
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
