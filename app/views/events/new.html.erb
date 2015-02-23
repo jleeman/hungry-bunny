@@ -1,9 +1,8 @@
 <% flash.each do |key, value| %>
   <div class="alert flash-<%= key %>"><%= value %></div>
 <% end %>
-<%= render 'admin/nav' %>
 <article class="type-system-traditional">
-  <%= form_for [:admin, @event], url: {action: "create"}, html: {class: "centered"} do |f| %>
+  <%= form_for @event, url: {action: "create"}, html: {class: "centered"} do |f| %>
     <h1>Create Event</h1>
     <%= f.label(:title, "Title:") %>
     <%= f.text_field :title %>
@@ -29,8 +28,6 @@
     <%= f.text_field :course_4 %>
     <%= f.label(:dessert, "Dessert:") %>
     <%= f.text_field :dessert %>
-    <%= f.label(:photo, "Photo:") %>
-    <%= f.file_field :photo %>
     <%= f.submit "Create" %>
   <% end %>
 </article>

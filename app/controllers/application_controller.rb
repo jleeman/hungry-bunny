@@ -13,10 +13,18 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
-    def require_user
+  def require_user
     if !logged_in?
       flash[:danger] = "Must be logged in."
       redirect_to sign_in_path
+    end
+  end
+
+  protected
+  
+  def authenticate
+    authenticate_or_request_with_http_basic do |username, password|
+      username == ENV["ADMIN_USERNAME"] && password == ENV["ADMIN_PASSWORD"]
     end
   end
 end
