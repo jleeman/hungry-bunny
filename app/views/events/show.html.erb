@@ -10,8 +10,6 @@
         <h1><%= @event.title %></h1>
         <h3><%= @event.address %></h3>
         <p class="date">
-          <!-- strftime throwing error in heroku production, converted to string, not date & time data types -->
-          <!-- <%= @event.event_date.strftime("%B %d, %Y") %>, <%= @event.event_time.strftime("%I %p") %> -->
           <%= @event.event_date %>, <%= @event.event_time %>
         </p>
         <p><%= @event.description %></p>
