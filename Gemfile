@@ -37,6 +37,7 @@ gem 'carrierwave'
 gem 'figaro'
 gem 'fog'
 gem 'rails_12factor'
+gem 'pg'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -63,9 +64,5 @@ group :test do
   gem 'webmock'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
-end
-
-group :production do
-  gem 'pg'
 end
 
