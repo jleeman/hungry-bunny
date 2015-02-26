@@ -10,7 +10,7 @@
         <h1><%= @event.title %></h1>
         <h3><%= @event.address %></h3>
         <p class="date">
-          <%= @event.event_date %>, <%= @event.event_time %>
+           <%= @event.event_date.strftime("%B %d, %Y") %>, <%= @event.event_time.strftime("%I %p") %>
         </p>
         <p><%= @event.description %></p>
         <p class="date">Cocktail</p>
