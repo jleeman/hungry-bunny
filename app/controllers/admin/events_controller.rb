@@ -10,7 +10,7 @@ class Admin::EventsController < ApplicationController
     @event = Event.new(event_params)
     if @event.save
       flash[:success] = "You have successfully created an event!"
-      redirect_to root_path
+      redirect_to event_path(@event)
     else
       flash[:error] = "Please review required fields."
       render :new
