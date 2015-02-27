@@ -4,7 +4,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_filter :authenticate
 
-  helper_method :current_user, :logged_in?
+  helper_method :current_user, :logged_in?, :admin?
+
+  def admin?
+    current_user.admin?
+  end
 
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
@@ -22,7 +26,7 @@ class ApplicationController < ActionController::Base
   end
 
   protected
-  
+
   def authenticate
     authenticate_or_request_with_http_basic do |username, password|
       username == ENV["ADMIN_USERNAME"] && password == ENV["ADMIN_PASSWORD"]

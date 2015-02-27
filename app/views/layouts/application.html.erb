@@ -8,6 +8,9 @@
   </head>
   <body>
     <%= render 'refills/centered_navigation' %>
+    <% if logged_in? && admin? %>
+      <%= render 'admin/nav' %>
+    <% end %>
     <section>
       <%= yield %>
     </section>
