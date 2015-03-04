@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: 'pages#front'
+  get 'about', to: 'pages#about'
 
   resources :events, only: [:index, :show]
   resources :users
