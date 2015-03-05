@@ -38,6 +38,8 @@ gem 'figaro'
 gem 'fog'
 gem 'rails_12factor'
 gem 'pg'
+gem 'simple_form'
+gem 'cocoon'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -65,4 +67,3 @@ group :test do
   gem 'selenium-webdriver'
   gem 'database_cleaner'
 end
-

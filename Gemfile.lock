@@ -73,6 +73,7 @@ GEM
       mime-types (>= 1.16)
     childprocess (0.5.5)
       ffi (~> 1.0, >= 1.0.11)
+    cocoon (1.2.6)
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -291,6 +292,9 @@ GEM
       websocket (~> 1.0)
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
+    simple_form (3.1.0)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
     slop (3.6.0)
     spring (1.2.0)
     sprockets (2.12.3)
@@ -341,6 +345,7 @@ DEPENDENCIES
   capybara-email
   capybara-webkit
   carrierwave
+  cocoon
   coffee-rails (~> 4.1.0)
   database_cleaner
   fabrication
@@ -361,6 +366,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   selenium-webdriver
   shoulda-matchers
+  simple_form
   spring
   sqlite3
   turbolinks
