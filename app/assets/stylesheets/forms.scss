@@ -2,3 +2,8 @@ form.centered {
   @include span-columns(6);
   @include shift(3);
 }
+
+select.dropdown {
+  width: 30%;
+  display: inline;
+}

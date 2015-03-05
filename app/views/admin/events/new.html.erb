@@ -10,34 +10,5 @@
   </div>
 <% end %>
 <article class="type-system-traditional">
-  <%= form_for [:admin, @event], url: {action: "create"}, html: {class: "centered"} do |f| %>
-    <h1>Create Event</h1>
-    <%= f.label(:title, "Title:") %>
-    <%= f.text_field :title %>
-    <%= f.label(:description, "Description:") %>
-    <%= f.text_area(:description, size: '50x10') %>
-    <%= f.label(:event_date, "Date:") %>
-    <%= f.date_field :event_date, :value => '01/01/2015' %>
-    <%= f.label(:event_time, "Time:") %>
-    <%= f.time_field :event_time, :value => '11 AM' %>
-    <%= f.label(:address, "Address:") %>
-    <%= f.text_field :address %>
-    <%= f.label(:event_type, "Type:") %>
-    <%= f.text_field :event_type %>
-    <%= f.label(:cocktail, "Cocktail:") %>
-    <%= f.text_field :cocktail %>
-    <%= f.label(:course_1, "Course 1:") %>
-    <%= f.text_field :course_1 %>
-    <%= f.label(:course_2, "Course 2:") %>
-    <%= f.text_field :course_2 %>
-    <%= f.label(:course_3, "Course 3:") %>
-    <%= f.text_field :course_3 %>
-    <%= f.label(:course_4, "Course 4:") %>
-    <%= f.text_field :course_4 %>
-    <%= f.label(:dessert, "Dessert:") %>
-    <%= f.text_field :dessert %>
-    <%= f.label(:photo, "Photo:") %>
-    <%= f.file_field :photo %>
-    <%= f.submit "Create" %>
-  <% end %>
+  <%= render 'form' %>
 </article>

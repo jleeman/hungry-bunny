@@ -1,0 +1,22 @@
+<%= simple_form_for @event, url: {action: "create"}, html: {class: "centered"} do |f| %>
+  <h1>Create Event</h1>
+  <%= f.input :title, label: 'Title:', as: :string %>
+  <%= f.input :description, label: 'Description:', as: :text %>
+  <%= f.input :event_date, label: 'Date:', input_html: { class: 'dropdown' }, as: :date %>
+  <%= f.input :event_time, label: 'Time:', input_html: { class: 'dropdown' }, as: :time %>
+  <%= f.input :address, label: 'Address:', as: :string %>
+  <%= f.input :event_type, label: 'Type', placeholder: 'i.e. Brunch or Dinner', as: :string %>
+  <%= f.input :cocktail, label: 'Cocktail:', as: :string %>
+  <h2>Courses</h2>
+  <div id="courses">
+    <%= f.simple_fields_for :courses do |course| %>
+      <%= render 'course_fields', :f => course %>
+    <% end %>
+    <div class="links">
+      <%= link_to_add_association 'add course', f, :courses %>
+    </div>
+  </div>
+  <%= f.input :dessert, label: 'Dessert:', as: :string %>
+  <%= f.input :photo, label: 'Photo:', as: :file %>
+  <%= f.button :submit %>
+<% end %>
