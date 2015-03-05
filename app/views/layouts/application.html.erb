@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <%= render 'refills/centered_navigation' %>
+    <%= render 'shared/nav' %>
     <% if logged_in? && admin? %>
       <%= render 'admin/nav' %>
     <% end %>
