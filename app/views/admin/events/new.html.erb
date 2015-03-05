@@ -1,5 +1,13 @@
-<% flash.each do |key, value| %>
-  <div class="alert flash-<%= key %>"><%= value %></div>
+<% if @event.errors.any? %>
+  <div class="alert flash-error">
+    <h2><%= pluralize(@event.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+    <ul>
+    <% @event.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
 <% end %>
 <article class="type-system-traditional">
   <%= form_for [:admin, @event], url: {action: "create"}, html: {class: "centered"} do |f| %>
