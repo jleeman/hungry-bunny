@@ -11,9 +11,7 @@
     <% if logged_in? && admin? %>
       <%= render 'admin/nav' %>
     <% end %>
-    <section>
       <%= yield %>
-    </section>
     <footer>
     </footer>
   </body>

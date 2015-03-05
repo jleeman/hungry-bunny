@@ -1,33 +1,30 @@
 <style media="screen">
   .images-wrapper { background-image: url("<%= @event.photo.url %>") }
 </style>
-<section>
-  <article class="type-system-traditional">
-    <div class="side-image">
-    <div class="images-wrapper"></div>
-      <div class="side-image-content">
-        <h4><%= @event.event_type %></h4>
-        <h1><%= @event.title %></h1>
-        <h3><%= @event.address %></h3>
-        <p class="date">
-           <%= @event.event_date.strftime("%B %d, %Y") %>, <%= @event.event_time.strftime("%I %p") %>
-        </p>
-        <p><%= @event.description %></p>
-        <p class="date">Cocktail</p>
-        <p><%= @event.cocktail %></p>
-        <p class="date">Course 1</p>
-        <p><%= @event.course_1 %></p>
-        <p class="date">Course 2</p>
-        <p><%= @event.course_2 %></p>
-        <p class="date">Couse 3</p>
-        <p><%= @event.course_3 %></p>
-        <p class="date">Course 4</p>
-        <p><%= @event.course_4 %></p>
-        <p class="date">Dessert</p>
-        <p><%= @event.dessert %></p>
-        <button>Reserve Today!</button>
-      </div>
+<article class="type-system-traditional">
+  <div class="side-image">
+  <div class="images-wrapper"></div>
+    <div class="side-image-content">
+      <h4><%= @event.event_type %></h4>
+      <h1><%= @event.title %></h1>
+      <h3><%= @event.address %></h3>
+      <p class="date">
+         <%= @event.event_date.strftime("%B %d, %Y") %>, <%= @event.event_time.strftime("%I %p") %>
+      </p>
+      <p><%= @event.description %></p>
+      <p class="date">Cocktail</p>
+      <p><%= @event.cocktail %></p>
+      <p class="date">Course 1</p>
+      <p><%= @event.course_1 %></p>
+      <p class="date">Course 2</p>
+      <p><%= @event.course_2 %></p>
+      <p class="date">Couse 3</p>
+      <p><%= @event.course_3 %></p>
+      <p class="date">Course 4</p>
+      <p><%= @event.course_4 %></p>
+      <p class="date">Dessert</p>
+      <p><%= @event.dessert %></p>
+      <button>Reserve Today!</button>
     </div>
-  </article>
-</section>
-
+  </div>
+</article>
