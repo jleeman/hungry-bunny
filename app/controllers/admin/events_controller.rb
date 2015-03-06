@@ -8,12 +8,27 @@ class Admin::EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
+
     if @event.save
       flash[:success] = "You have successfully created an event!"
       redirect_to event_path(@event)
     else
       flash[:error] = "Please review required fields."
       render :new
+    end
+  end
+
+  def edit
+    @event = Event.find(params[:id])
+  end
+
+  def update
+    @event = Event.find(params[:id])
+    if @event.update_attributes(event_params)
+      flash[:success] = "Successfully updated event."
+      redirect_to event_path(@event)
+    else
+      render :edit
     end
   end
 

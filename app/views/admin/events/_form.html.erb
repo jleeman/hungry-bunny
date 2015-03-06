@@ -1,5 +1,4 @@
-<%= simple_form_for @event, url: {action: "create"}, html: {class: "centered"} do |f| %>
-  <h1>Create Event</h1>
+<%= simple_form_for @event, url: {action: action}, html: {class: "centered"} do |f| %>
   <%= f.input :title, label: 'Title:', as: :string %>
   <%= f.input :description, label: 'Description:', as: :text %>
   <%= f.input :event_date, label: 'Date:', input_html: { class: 'dropdown' }, as: :date %>
