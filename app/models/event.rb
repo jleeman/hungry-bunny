@@ -5,6 +5,6 @@ class Event < ActiveRecord::Base
 
   accepts_nested_attributes_for :courses, :reject_if => :all_blank, :allow_destroy => true
 
-  validates_presence_of :title, :description, :event_type, :event_date, :event_time
-  
+  validates_presence_of :title, :description, :address, :event_type, :event_date, :event_time
+
 end

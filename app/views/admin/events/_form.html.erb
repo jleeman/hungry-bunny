@@ -6,8 +6,7 @@
   <%= f.input :event_time, label: 'Time:', input_html: { class: 'dropdown' }, as: :time %>
   <%= f.input :address, label: 'Address:', as: :string %>
   <%= f.input :event_type, label: 'Type', placeholder: 'i.e. Brunch or Dinner', as: :string %>
-  <%= f.input :cocktail, label: 'Cocktail:', as: :string %>
-  <h2>Courses</h2>
+  <label>Courses</label>
   <div id="courses">
     <%= f.simple_fields_for :courses do |course| %>
       <%= render 'course_fields', :f => course %>
@@ -16,7 +15,6 @@
       <%= link_to_add_association 'add course', f, :courses %>
     </div>
   </div>
-  <%= f.input :dessert, label: 'Dessert:', as: :string %>
   <%= f.input :photo, label: 'Photo:', as: :file %>
   <%= f.button :submit %>
 <% end %>

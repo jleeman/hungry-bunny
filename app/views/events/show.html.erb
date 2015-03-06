@@ -7,14 +7,11 @@
     <div class="side-image-content">
       <h4><%= @event.event_type %></h4>
       <h1><%= @event.title %></h1>
-      <% if @event.address %>
-        <h3><%= @event.address %></h3>
-      <% end %>
+      <h3><%= @event.address %></h3>
+      <p><%= @event.description %></p>
       <p class="date">
          <%= @event.event_date.strftime("%B %d, %Y") %>, <%= @event.event_time.strftime("%I %p") %>
       </p>
-      <p><%= @event.description %></p>
-      <p class="date">Cocktail</p>
       <p><%= @event.cocktail %></p>
       <% @event.courses.each do |course| %>
         <p class="date">
@@ -24,8 +21,6 @@
           <%= course.description %>
         </p>
       <% end %>
-      <p class="date">Dessert</p>
-      <p><%= @event.dessert %></p>
       <button>Reserve Today!</button>
     </div>
   </div>
