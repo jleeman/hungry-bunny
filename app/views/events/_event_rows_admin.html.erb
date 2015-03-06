@@ -1,0 +1,12 @@
+<% @events.each do |event| %>
+  <section class="row">
+    <h4><%= event.event_type %></h4>
+    <h1><%= link_to "#{event.title}", event %></h1>
+    <h3><%= event.address %></h3>
+    <p class="date">
+       <%= event.event_date.strftime("%B %d, %Y") %>, <%= event.event_time.strftime("%I %p") %>
+    </p>
+    <%= button_to "EDIT", edit_admin_event_path(:id => event.id), method: :get %>
+    <%= button_to "DELETE", admin_event_path(:id => event.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+  </section>
+<% end %>

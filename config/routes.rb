@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   get 'sign_out', to: 'sessions#destroy'
 
   namespace :admin do
-    resources :events, only: [:new, :create, :edit, :update]
+    resources :events, only: [:new, :create, :edit, :update, :destroy]
   end
 end

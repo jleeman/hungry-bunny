@@ -1,5 +1,9 @@
 <section>
   <article class="type-system-traditional centered">
-    <%= render 'event_rows' %>
+    <% if logged_in? && admin? %>
+      <%= render 'event_rows_admin' %>
+    <% else %>
+      <%= render 'event_rows' %>
+    <% end %>
   </article>
 </section>

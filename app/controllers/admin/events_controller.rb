@@ -32,6 +32,12 @@ class Admin::EventsController < ApplicationController
     end
   end
 
+  def destroy
+    @event = Event.find(params[:id])
+    @event.destroy
+    redirect_to root_path
+  end
+
   private
 
   def require_admin
