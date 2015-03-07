@@ -1,0 +1,24 @@
+<%= simple_form_for @recipe, url: {action: action} do |f| %>
+  <%= f.input :title, label: 'Title:', as: :string %>
+  <%= f.input :description, label: 'Description:', as: :text %>
+  <h2>Ingredients</h2>
+  <div id="ingredients">
+    <%= f.simple_fields_for :ingredients do |ingredient| %>
+      <%= render 'ingredient_fields', :f => ingredient %>
+    <% end %>
+    <div class="links">
+      <%= link_to_add_association 'add ingredient', f, :ingredients %>
+    </div>
+  </div>
+  <h2>Instructions</h2>
+  <div id="instructions">
+    <%= f.simple_fields_for :instructions do |instruction| %>
+      <%= render 'instruction_fields', :f => instruction %>
+    <% end %>
+    <div class="links">
+      <%= link_to_add_association 'add instruction', f, :instructions %>
+    </div>
+  </div>
+  <%= f.input :photo, label: 'Photo:', as: :file %>
+  <%= f.button :submit %>
+<% end %>

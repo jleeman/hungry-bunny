@@ -1,0 +1,31 @@
+ul {
+  list-style-type: disc;
+  margin-bottom: 30;
+}
+
+
+li {
+  margin-left: 40;
+}
+
+.row {
+  margin-top: 1em;
+  border-bottom: 1px solid #BBB;
+  padding-bottom: 1em;
+}
+
+h4 {
+  background: #BBB;
+  color: white;
+  display: inline-block;
+  font-size: 0.75em;
+  font-weight: 800;
+  margin-bottom: 1.3em;
+  padding: 3px 8px;
+  text-transform: uppercase;
+}
+
+.centered {
+  @include span-columns(6);
+  @include shift(3);
+}

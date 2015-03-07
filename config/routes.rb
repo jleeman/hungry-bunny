@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
 
   resources :events, only: [:index, :show]
+  resources :recipes, only: [:index, :show]
   resources :users, only: [:create]
   resources :sessions, only: [:create, :destroy]
 
@@ -11,5 +12,6 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :events
+    resources :recipes
   end
 end

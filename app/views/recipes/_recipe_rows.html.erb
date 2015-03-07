@@ -1,0 +1,7 @@
+<% @recipes.each do |recipe| %>
+  <section class="row">
+    <h4>RECIPE</h4>
+    <h1><%= link_to "#{recipe.title}", recipe %></h1>
+    <p><%= recipe.description %></p>
+  </section>
+<% end %>

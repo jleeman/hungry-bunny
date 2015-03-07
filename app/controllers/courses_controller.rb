@@ -9,7 +9,7 @@ class CoursesController < ApplicationController
 
   private
 
-  def event_params
+  def course_params
     params.require(:course).permit(:label, :description, :event_id)
   end
 end

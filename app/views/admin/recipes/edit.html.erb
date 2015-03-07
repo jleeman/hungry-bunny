@@ -1,0 +1,15 @@
+<% if @recipe.errors.any? %>
+  <div class="alert flash-error">
+    <h2><%= pluralize(@recipe.errors.count, "error") %> prevented this recipe from being saved:</h2>
+
+    <ul>
+    <% @recipe.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<article class="type-system-traditional centered">
+  <h1>Edit Recipe</h1>
+  <%= render :partial => 'form', :locals => {:action => "update"} %>
+</article>

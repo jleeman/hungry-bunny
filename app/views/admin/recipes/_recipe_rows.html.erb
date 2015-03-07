@@ -1,0 +1,9 @@
+<% @recipes.each do |recipe| %>
+  <section class="row">
+    <h4>RECIPE</h4>
+    <h1><%= link_to "#{recipe.title}", recipe %></h1>
+    <p><%= recipe.description %></p>
+    <%= button_to "EDIT", edit_admin_recipe_path(:id => recipe.id), method: :get %>
+    <%= button_to "DELETE", admin_recipe_path(:id => recipe.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+  </section>
+<% end %>

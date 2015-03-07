@@ -12,7 +12,6 @@
       <p class="date">
          <%= @event.event_date.strftime("%B %d, %Y") %>, <%= @event.event_time.strftime("%I %p") %>
       </p>
-      <p><%= @event.cocktail %></p>
       <% @event.courses.each do |course| %>
         <p class="date">
           <%= course.label %>

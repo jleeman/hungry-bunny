@@ -1,0 +1,31 @@
+<style media="screen">
+  .images-wrapper { background-image: url("<%= @recipe.photo.url %>") }
+</style>
+<article class="type-system-traditional">
+  <div class="side-image">
+  <div class="images-wrapper"></div>
+    <div class="side-image-content">
+      <h4>Recipe</h4>
+      <h1><%= @recipe.title %></h1>
+      <p><%= @recipe.description %></p>
+      <h2>Ingredients</h2>
+      <ul>
+        <% @recipe.ingredients.each do |ingredient| %>
+          <li>
+            <strong><%= ingredient.title %></strong><br>
+            <%= ingredient.amount %>, <em><%= ingredient.prep_method %></em>
+          </li>
+        <% end %>
+      </ul>
+      <h2>Instructions</h2>
+      <ul>
+        <% @recipe.instructions.each do |instruction| %>
+          <li>
+            <strong><%= instruction.step %></strong><br>
+            <%= instruction.instruction %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</article>
