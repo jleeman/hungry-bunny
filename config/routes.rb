@@ -3,13 +3,13 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
 
   resources :events, only: [:index, :show]
-  resources :users
+  resources :users, only: [:create]
   resources :sessions, only: [:create, :destroy]
 
   get 'sign_in', to: 'sessions#new'
   get 'sign_out', to: 'sessions#destroy'
 
   namespace :admin do
-    resources :events, only: [:new, :create, :edit, :update, :destroy]
+    resources :events
   end
 end

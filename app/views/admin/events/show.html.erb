@@ -22,6 +22,10 @@
         </p>
       <% end %>
       <button>Reserve Today!</button>
+        <p>
+          <%= button_to "EDIT", edit_admin_event_path(:id => @event.id), method: :get %>
+          <%= button_to "DELETE", admin_event_path(:id => @event.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+        </p>
     </div>
   </div>
 </article>
