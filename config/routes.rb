@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :events, only: [:index, :show]
   resources :recipes, only: [:index, :show]
-  resources :users, only: [:create]
+  resources :users, only: [:new, :create]
   resources :sessions, only: [:create, :destroy]
 
   get 'sign_in', to: 'sessions#new'
