@@ -9,18 +9,18 @@
       <h1><%= @recipe.title %></h1>
       <p><%= @recipe.description %></p>
       <h2>Ingredients</h2>
-      <ul>
+      <ul class="recipe">
         <% @recipe.ingredients.each do |ingredient| %>
-          <li>
+          <li class="recipe">
             <strong><%= ingredient.title %></strong><br>
             <%= ingredient.amount %>, <em><%= ingredient.prep_method %></em>
           </li>
         <% end %>
       </ul>
       <h2>Instructions</h2>
-      <ul>
+      <ul class="recipe">
         <% @recipe.instructions.each do |instruction| %>
-          <li>
+          <li class="recipe">
             <strong><%= instruction.step %></strong><br>
             <%= instruction.instruction %>
           </li>
