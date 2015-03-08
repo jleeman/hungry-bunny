@@ -1,0 +1,23 @@
+<% if @reservation.errors.any? %>
+  <div class="alert flash-error">
+    <h2><%= pluralize(@reservation.errors.count, "error") %> prevented this RSVP from being sent:</h2>
+
+    <ul>
+    <% @reservation.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<article class="type-system-traditional centered">
+  <h1>RSVP</h1>
+  <%= simple_form_for @reservation do |f| %>
+    <%= f.input :email, label: 'Email:', as: :string %>
+    <%= f.input :first_name, label: 'First Name:', as: :string %>
+    <%= f.input :last_name, label: 'Last Name:', as: :string %>
+    <%= f.input :num_guests, label: 'Number of Guests:', as: :integer %>
+    <%= f.input :message, label: 'Message:', as: :text %>
+    <%= f.input :event_id, :value => params[:event_id], as: :hidden %>
+    <%= f.button :submit %>
+  <% end %>
+</article>
