@@ -14,6 +14,6 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :events
     resources :recipes
-    resources :reservations
+    resources :reservations, only: [:index, :destroy]
   end
 end

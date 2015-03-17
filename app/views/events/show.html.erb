@@ -20,8 +20,6 @@
           <%= course.description %>
         </p>
       <% end %>
-      <%= link_to "Reserve Today!", new_reservation_path(:event_id => @event.id) %>
-      <%= button_to "Reserve Today!", new_reservation_path(:event_id => @event.id), method: :get %>
-    </div>
+      <%= link_to "Reserve Today!", new_reservation_path(:event_id => @event.id), {:style=>'color:#FFFFFF;', :class => "button"} %>
   </div>
 </article>
