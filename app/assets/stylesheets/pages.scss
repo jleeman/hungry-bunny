@@ -12,3 +12,8 @@ article.centered {
   @include span-columns(7);
   @include shift(2);
 }
+
+article.contact {
+  @include span-columns(3);
+  @include shift(2);
+}

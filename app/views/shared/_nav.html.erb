@@ -1,14 +1,11 @@
 <header class='centered-navigation' role='banner'>
   <div class='centered-navigation-wrapper'>
-    <%= link_to image_tag('http://thenation.s3.amazonaws.com/ads/hb/bunny.png', :border => 0, :alt => 'Hungry Bunny', :class => 'mobile-logo'), root_path %>
+    <%= link_to image_tag('http://thenation.s3.amazonaws.com/ads/hb/HB_Final_Color.png', :border => 0, :alt => 'Hungry Bunny', :class => 'mobile-logo'), root_path %>
     <a class='centered-navigation-mobile-menu' href='javascript:void(0)' id='js-centered-navigation-mobile-menu'>MENU</a>
     <nav role='navigation'>
       <ul class='centered-navigation-menu show' id='js-centered-navigation-menu'>
-        <li class='nav-link'>
-          <%= link_to "THE HUNGRY BUNNY", root_path %>
-        </li>
         <li class='nav-link logo'>
-          <%= link_to image_tag('http://thenation.s3.amazonaws.com/ads/hb/bunny.png', :border => 0, :alt => 'Hungry Bunny', :class => 'logo'), root_path %>
+          <%= link_to image_tag('http://thenation.s3.amazonaws.com/ads/hb/HB_Final_Color.png', :border => 0, :alt => 'Hungry Bunny', :class => 'logo'), root_path %>
         </li>
         <li class='nav-link'>
           <%= link_to "About", about_path %>
@@ -21,10 +18,10 @@
         </li>
         <li class="nav-link more"><a href="javascript:void(0)">More</a>
           <ul class="submenu">
-            <li><a href="javascript:void(0)">Catering</a></li>
-            <li><a href="javascript:void(0)">Community</a></li>
-            <li><a href="javascript:void(0)">FAQ</a></li>
-            <li><a href="javascript:void(0)">Contact</a></li>
+            <li><%= link_to 'FAQ', faq_path %></li>
+            <li><%= link_to 'Contact', contact_path %></li>
+            <li><%= link_to 'Community', community_path %></li>
+            <li><%= link_to 'Catering', catering_path %></li>
           </ul>
         </li>
       </ul>
