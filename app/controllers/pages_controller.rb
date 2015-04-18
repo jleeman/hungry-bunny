@@ -17,4 +17,18 @@ class PagesController < ApplicationController
 
   def contact
   end
+
+  def index
+    @pages = Page.all.order("event_date DESC")
+  end
+
+  def show
+    @page = Page.find(params[:id])
+  end
+
+  private
+
+  def page_params
+    params.require(:page).permit(:title, :body)
+  end
 end

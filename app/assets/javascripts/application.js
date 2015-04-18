@@ -18,3 +18,4 @@
 //= require_tree .
 //= require refills/centered_navigation
 //= require cocoon
+//= require ckeditor/init

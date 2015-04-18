@@ -1,0 +1,15 @@
+<% if @page.errors.any? %>
+  <div class="alert flash-error">
+    <h2><%= pluralize(@page.errors.count, "error") %> prevented this page from being saved:</h2>
+
+    <ul>
+    <% @page.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<article class="type-system-traditional centered">
+    <h1>Create Page</h1>
+  <%= render :partial => 'form', :locals => {:action => "create"} %>
+</article>

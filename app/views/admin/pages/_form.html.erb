@@ -1,0 +1,5 @@
+<%= simple_form_for @page, url: {action: action} do |f| %>
+  <%= f.input :title, label: 'Title:', as: :string %>
+  <%= f.input :body, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full'} } %>  
+  <%= f.button :submit %>
+<% end %>

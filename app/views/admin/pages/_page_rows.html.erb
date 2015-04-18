@@ -1,0 +1,7 @@
+<% @pages.each do |page| %>
+  <section class="row">
+    <h1><%= link_to "#{page.title}", page %></h1>
+    <%= button_to "EDIT", edit_admin_page_path(:id => page.id), method: :get %>
+    <%= button_to "DELETE", admin_page_path(:id => page.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+  </section>
+<% end %>
