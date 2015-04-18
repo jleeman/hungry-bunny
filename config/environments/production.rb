@@ -2,7 +2,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # settings added for asset pipeline on heroku
-  config.serve_static_assets = true
+  config.serve_static_files = true
 
   # Code is not reloaded between requests.
   config.cache_classes = true
