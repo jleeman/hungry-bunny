@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
-  
+
   root to: 'pages#front'
   get 'about', to: 'pages#about'
   get 'catering', to: 'pages#catering'

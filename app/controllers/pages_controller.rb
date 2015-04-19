@@ -19,7 +19,7 @@ class PagesController < ApplicationController
   end
 
   def index
-    @pages = Page.all.order("event_date DESC")
+    @pages = Page.all.order("created_at DESC")
   end
 
   def show
