@@ -4,18 +4,23 @@ class PagesController < ApplicationController
   end
 
   def about
+    @page = Page.find_by title: 'About'
   end
 
   def catering
+    @page = Page.find_by title: 'Catering'
   end
 
   def community
+    @page = Page.find_by title: 'Community'
   end
 
   def faq
+    @page = Page.find_by title: 'FAQ'
   end
 
   def contact
+    @page = Page.find_by title: 'Contact'
   end
 
   def index
