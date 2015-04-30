@@ -13,7 +13,7 @@
         <% @recipe.ingredients.each do |ingredient| %>
           <li class="recipe">
             <strong><%= ingredient.title %></strong><br>
-            <%= ingredient.amount %>, <em><%= ingredient.prep_method %></em>
+            <%= ingredient.amount %> <em><%= ingredient.prep_method %></em>
           </li>
         <% end %>
       </ul>
